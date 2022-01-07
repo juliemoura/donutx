@@ -1,9 +1,11 @@
-type ButtonProps = { // estamos adicionando ao botao um tipo
-    children?: string; // esse ? significa opcional, o botao pode ter um texto ou não
-}
+import { ButtonHTMLAttributes } from 'react'; // esse ButtonHTMLAttributes ja tras automaticamente todo tipo de atributo que um botao pode receber, seja o tipo text, submit, radio
+
+import '../styles/buttons.scss';
+
+type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement>;
 
 export function Button(props: ButtonProps){ //passando como parametro o tipo do botao
     return (
-        <button>{props.children || 'Default'}</button> // aqui atribui um texto ao botao, OU(||) se ele nao tiver um texto deixa como default
+        <button className="button" {...props}/> // esse {...props} passa todo tipo de propriedade para esse botao, do tipo texto, radio, submit e e tc
     )
 }

@@ -1,5 +1,11 @@
-import ImagemPrincipal from '../assets/images/cabec.svg'
+import ImagemPrincipal from '../assets/images/cabecalho.png'
 import Logo from '../assets/images/logo.svg'
+import Menu from '../assets/images/menu.svg'
+
+import { firebase, auth, database } from '../services/firebase';
+
+import { Link } from 'react-router-dom';
+
 import Mouse from '../assets/images/mouse.svg'
 import Cart from '../assets/images/cart.svg'
 import Alarm from '../assets/images/alarm.svg'
@@ -7,31 +13,66 @@ import Casa from '../assets/images/home.svg'
 import GoogleIcon from '../assets/images/google.png'
 import FacebookIcon from '../assets/images/facebook.png'
 import TwitterIcon from '../assets/images/twitter.png'
+import { Button } from '../components/Button'
 
 import '../styles/auth.scss'
 import '../styles/buttons.scss'
-
+import '../styles/global.scss'
 
 export function Login() {
+    
+    function toGoogle(){
+        const provider = new firebase.auth.GoogleAuthProvider();
+
+        auth.signInWithPopup(provider).then(result => {
+            console.log(result);
+        })
+    }
+
+    function toFacebook(){
+        const providerr = new firebase.auth.FacebookAuthProvider();
+
+        auth.signInWithPopup(providerr).then(result => {
+            console.log(result);
+        })
+    }
+
+    function toTwitter(){
+        const providerrr = new firebase.auth.TwitterAuthProvider();
+
+        auth.signInWithPopup(providerrr).then(result => {
+            console.log(result);
+        })
+    }
+    
     return (
         <>
-            <img src={ImagemPrincipal} alt="Imagem Cabeçalho" id="img-cabec" />
-            <img src={Logo} alt="Logo Donutx" id="logo-cabec" />
+            <img src={ImagemPrincipal} alt="Imagem Cabeçalho" id="img-header" />
+            <div className='list-header'>
+                <Link to="/"><img src={Logo} alt="Logo Donutx" id="logo-cabec" /></Link>
+                <Link to="/login"><img src={Menu} alt="Menu" /></Link>
+            </div>
 
             <div id="page-auth">
 
                 <main>
                     <h1>Login</h1>
-                    <div id="linha"></div>
-                    <button className="buttonIcon">
+                    <div id="line"></div>
+                    <button 
+                    onClick={toGoogle}
+                    className="button-icon">
                         <img src={GoogleIcon} alt="Logo Google" />
                     </button>
 
-                    <button className="buttonIcon">
+                    <button 
+                    onClick={toFacebook}
+                    className="button-icon">
                         <img src={FacebookIcon} alt="Logo Facebook" />
                     </button>
 
-                    <button className="buttonIcon">
+                    <button 
+                    onClick={toTwitter}
+                    className="button-icon">
                         <img src={TwitterIcon} alt="Logo Twitter" />
                     </button>
 
@@ -42,31 +83,30 @@ export function Login() {
                         />
 
                         <input
-                            id="senha"
+                            id="passwords"
                             type="password"
                         />
                     </form>
 
                 </main>
 
-                <div className="senha-container">
+                <div className="password-container">
                     <input
                         type="checkbox"
                         id="check"
-                    /><p className="lembrar-senha">Lembrar minha senha</p>
+                    /><p className="remember-password">Lembrar minha senha</p>
                 </div>
 
                 <div>
-                <button
-                        className="botao-submit"
-                        type="submit">
+                    <Button
+                        type="submit"
+                        className="button-submit"
+                    >
                         Entrar
-                    </button>
+                    </Button>
 
-                    <p id="senha-esquecida">Esqueceu sua senha? <b>Redefina agora.</b> </p>
+                    <p id="forgot-password">Esqueceu sua senha? <b>Redefina agora.</b> </p>
                 </div>
-
-                <img src={ImagemPrincipal} alt="Imagem Cabeçalho" id="img-footer" />
             </div>
         </>
 
