@@ -1,0 +1,14 @@
+#page-principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .logout {
+        width: 1.5rem;
+    }
+
+    h3{
+        margin-top: 3rem;
+        font-size: 1.5rem;
+    }
+}

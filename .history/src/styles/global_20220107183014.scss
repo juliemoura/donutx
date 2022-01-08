@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    body {
+        background-image: url(../assets/images/bg.png);
+        color: #29292e;
+    }
+
+    #img-footer {
+        bottom: 0;
+        position: absolute;
+        width: 100%;
+    }
+
+    body,
+    input,
+    button,
+    textarea {
+        font: 400 10px "Roboto", open-sans;
+    }
+
+    b {
+        font-weight: bold;
+    }
+
+    h1 {
+        margin-top: 6rem;
+        margin-bottom: 2rem;
+        text-align: center;
+        font-size: 25px;
+    }
+    
+    a{
+        text-decoration: none;
+    }
+}

@@ -1,0 +1,24 @@
+footer {
+    background-color: #f3cbf1;
+    text-align: center;
+    bottom: 0;
+    position: relative;
+
+    #footer-title {
+        margin-top: .7rem;
+        padding-top: 1rem;
+    }
+
+    .media {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        margin-top: 1rem;
+    }
+
+    #developed-by {
+        margin-top: 12px;
+        margin-left: 16.4rem;
+        opacity: 50%;
+        padding-bottom: .7rem;
+    }
+}

@@ -1,0 +1,49 @@
+* {
+    .button-icon {
+        box-sizing: border-box;
+        border-radius: 40px;
+        border: none;
+        background-color: #fefefe;
+        padding: 15px;
+        box-shadow: 5px 5px 5px #000000;
+        margin-left: 1rem;
+        margin-bottom: 4rem;
+    }
+
+    .button-submit {
+        padding-top: 8px;
+        padding-bottom: 8px;
+        padding-left: 30px;
+        padding-right: 30px;
+        text-align: center;
+        font-size: 1.1rem;
+        margin-top: 2rem;
+        margin-left: 7rem;
+        margin-right: 7rem;
+        border: none;
+        background-color: #e7c0c5;
+        box-shadow: 3px 3px 3px;
+    }
+
+    .button-newsletter {
+        padding-top: 10px;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-bottom: 10px;
+        text-align: center;
+        font-size: 18px;
+        margin-top: 2rem;
+        border: none;
+        background-color: #e7c0c5;
+        box-shadow: 3px 3px 3px;
+    }
+
+    Button {
+        cursor: pointer;
+        transition: filter 0.9s;
+
+        &:hover {
+            filter: brightness(0.9);
+        }
+    }
+}

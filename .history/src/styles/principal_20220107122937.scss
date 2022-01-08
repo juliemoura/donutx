@@ -1,0 +1,9 @@
+#page-principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .logout {
+        width: 1.5rem;
+    }
+}

@@ -1,0 +1,106 @@
+#page-home {
+    display: flex;
+    flex-direction: column;
+    align-items: strech;
+
+    #button-login{
+        background-color: #b7d5e5;
+        border: none;
+    }
+
+    aside {
+        display: flex;
+        justify-content: right;
+        margin-left: 11.4rem;
+        margin-top: -26rem;
+    }
+
+    #donut {
+        max-width: 60%;
+        display: flex;
+        justify-content: right;
+        flex-direction: row;
+
+        margin-top: -28rem;
+        margin-left: 13.7rem;
+    }
+    .title-principal {
+        margin-top: 10rem;
+        align-items: stretch;
+    }
+
+    .panel-left {
+        display: flex;
+        flex-direction: row;
+        margin-top: 2.3rem;
+    }
+
+    .title-principal {
+        font-size: 20px;
+        margin-left: 2rem;
+        font-weight: bold;
+    }
+    .subtitle-principal {
+        font-weight: bold;
+        margin-top: 5px;
+        margin-left: 2.4rem;
+        font-size: 1.4rem;
+        color: #d58d99;
+        font-family: "Cutive", Arial, Helvetica, sans-serif;
+    }
+
+    h4{
+      margin-right: 10rem;  
+    }
+
+    h3 {
+        font-size: 15px;
+        margin-left: 0.5rem;
+    }
+
+    .img-svg {
+        width: 35px;
+        height: 35px;
+        margin-left: 1rem;
+        margin-top: -0.4rem;
+        margin-bottom: 0.5rem;
+    }
+
+    #newsletter {
+        margin-left: 1.8rem;
+        
+
+        #input-newsletter {
+            padding-right: 165px;
+            padding-bottom: 20px;
+            padding-top: 18px;
+
+            margin-bottom: 5rem;
+
+            background-image: url(../assets/images/email.png);
+            background-repeat: no-repeat;
+            background-position: 7%;
+            box-shadow: 1px 1px 1px;
+            border: none;
+        }
+    }
+    footer{
+	    background-color: #F3CBF1; 
+	    padding: 40px 0;  
+        text-align: center;
+    }
+    #footer-title{
+        margin-top: -1.5rem;
+    }
+
+    .media{
+        margin-left: 1rem;
+        margin-right: 1rem;
+        margin-top: 1rem;
+    }
+
+    #developed-by{
+        margin-top: 1px;
+    }
+}
+
